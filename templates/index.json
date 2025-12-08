@@ -1,1 +1,1071 @@
-{"sections":{"slideshow_X7LGWE":{"type":"slideshow","blocks":{"slide_gcxdXV":{"type":"_slide","settings":{"media_type_1":"video","image_1":"shopify:\/\/shop_images\/Home_Image.png","video_1":"shopify:\/\/files\/videos\/GV CASA HOME INTRO.mp4","content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"flex-end","gap":0,"inherit_color_scheme":true,"color_scheme":"","toggle_overlay":false,"overlay_color":"#2022191c","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"slide_87Y3Rj":{"type":"_slide","settings":{"media_type_1":"image","image_1":"shopify:\/\/shop_images\/GV-CASA-Background.jpg","content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"inherit_color_scheme":true,"color_scheme":"","toggle_overlay":true,"overlay_color":"#2022191c","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"group_rcwi9i":{"type":"group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"width":"custom","custom_width":50,"width_mobile":"custom","custom_width_mobile":57,"height":"fit","custom_height":100,"inherit_color_scheme":false,"color_scheme":"scheme-6","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":48,"padding-block-end":48,"padding-inline-start":48,"padding-inline-end":48},"blocks":{"image_b76U7n":{"type":"image","name":"t:names.image","settings":{"image":"shopify:\/\/shop_images\/Label_Air_GV_6224c839-e96c-4f5d-aa5a-cc318864d0ad.png","link":"","image_ratio":"adapt","width":"fit-content","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_A4XBTG":{"type":"text","disabled":true,"settings":{"text":"<h2>Extrait de parfum<\/h2>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_D8yL6f":{"type":"text","disabled":true,"settings":{"text":"<p><em>Amber. Patchouli. Air.<\/em><\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"custom","font":"var(--font-body--family)","font_size":"1.25rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":20,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"button_dA3g33":{"type":"button","settings":{"label":"Discover More","link":"shopify:\/\/collections\/air","open_in_new_tab":false,"style_class":"button-secondary","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["image_b76U7n","text_A4XBTG","text_D8yL6f","button_dA3g33"]}},"block_order":["group_rcwi9i"]},"slide_fNhbhg":{"type":"_slide","disabled":true,"settings":{"media_type_1":"image","image_1":"shopify:\/\/shop_images\/vulcano_main.png","content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"flex-end","gap":12,"inherit_color_scheme":true,"color_scheme":"","toggle_overlay":false,"overlay_color":"#2022191c","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"group_TMABhM":{"type":"group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"width":"custom","custom_width":50,"width_mobile":"custom","custom_width_mobile":85,"height":"fit","custom_height":100,"inherit_color_scheme":false,"color_scheme":"scheme-6","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":48,"padding-block-end":100,"padding-inline-start":48,"padding-inline-end":48},"blocks":{"text_7kKhzP":{"type":"text","disabled":true,"settings":{"text":"<h2>VULCANO<\/h2>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_EnLCkA":{"type":"text","disabled":true,"settings":{"text":"<p>a Mythical Creature of JOY<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":20,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"button_aL7zPX":{"type":"button","settings":{"label":"Discover More","link":"shopify:\/\/products\/vulcano","open_in_new_tab":false,"style_class":"button-secondary","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["text_7kKhzP","text_EnLCkA","button_aL7zPX"]}},"block_order":["group_TMABhM"]}},"block_order":["slide_gcxdXV","slide_87Y3Rj","slide_fNhbhg"],"name":"t:names.slideshow","settings":{"icons_style":"arrow","slideshow_controls_style":"dots","color_scheme":"scheme-5","autoplay":false,"autoplay_speed":5,"section_width":"full-width","slide_height":"large","padding-block-start":0,"padding-block-end":0}},"section_MgkEX9":{"type":"section","blocks":{"custom_liquid_gNPPLY":{"type":"custom-liquid","name":"t:names.custom_liquid","settings":{"custom_liquid":"<div> \n    <div id=\"gv-svg-new-position\" class=\"gvc-overlap-svg-container\">\n        <svg id=\"Layer_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" version=\"1.1\" viewBox=\"0 0 720 125\">\n  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->\n  <path d=\"M118.27,72.4c-2.05,3.25-7.99,1.79-10.1,7.6-1.5,4.12-2.24,17.01-1.74,21.44.27,2.42,1.6,3.18,2.91,4.7.82.96.61,2.4.04,3.47-.51.96-3.62,1.59-4.85,2.13-9.81,4.24-16.78,8.07-27.72,9.93C34.4,128.9-5.45,94.85,4.82,50.73,10.99,24.19,36.61,3.89,63.68,2.4c10.52-.58,27.05,1.79,37.28,4.61,3.11.86,4.49.89,5.16,4.31.73,3.75,2.19,15.47,1.51,18.81-.38,1.89-2.05,3.29-4,2.37-1.78-.85-3.53-6.54-4.63-8.58-5.54-10.32-17.13-14.22-28.35-14.78C15.66,6.37,3.39,90.53,48.75,111.74c15.34,7.17,44.31,7.18,45.74-15.03.24-3.76.56-10.09.25-13.72-.09-1.05-.4-2.35-1.04-3.19-2.18-2.84-9.88-4.33-13.34-4.86-2.13-.33-4.41.13-6.2-1.28-3.02-2.37.17-5.03,2.98-5.24,1.14-.09,2.01.25,2.99.27,7.9.14,15.8.78,23.71.5,3.28-.12,6.92-.78,10.21-.78,2.11,0,5.88,1.38,4.23,4ZM712.2,121.66c-.6,1.21-6.45,1.03-7.83.98-4.53-.15-9.13-.84-13.66-1-8.36-.29-17.56.75-25.67.26-1.56-.09-6.68-.49-5.1-3.16,1.32-2.23,7.02-2.54,9.44-3.27,9.25-2.78,6.61-9.43,4.96-16.77-1.47-6.54-3.36-13.04-5.53-19.37-.48-.59-2.01-.82-2.77-.89-10.85-.92-22.98.72-33.97,0-2.05.05-2.67,1.64-3.29,3.3-1.89,4.99-3.64,11.24-5.05,16.43-1.42,5.23-3.9,10.59.9,14.82,3.18,2.8,6.25,2.84,9.84,4.33,3.5,1.44,4.75,4.19.07,4.59-7.34.63-15.86-.58-23.47-.26-4.41.18-16.24,2.23-19.58.06-2.88-1.87,1.32-4.04,2.94-4.73,7.91-3.4,11.82-3.81,16.09-12.24,4.82-9.51,9.2-21.18,13.26-31.17,4.76-11.69,9.32-23.5,13.75-35.32,2.46-6.56,5.53-13.71,7.45-20.37.62-2.14,1.15-4.3,1.27-6.54.4-.83,6.22-1.54,7.88-4.58.51-.93,1.18-4.22,2.16-4.44.33-.07.42.17.56.39,8.59,26.28,16.81,52.7,25.92,78.8,2.09,6,4.11,12.12,6.35,18.06,2.78,7.37,5.55,13.54,13.55,16.23,2.07.7,11.47,1.96,9.54,5.85ZM664.02,65.58c-3.64-11.94-7.52-24.25-11.54-36.06-.24-.7-1.56-4.98-2.08-4.99l-17.43,47.43,1.79.65c9.59-.51,19.82.65,29.33,0,.53-.04,1.04-.17,1.55-.28.48-.57-1.3-5.73-1.62-6.75ZM514.07,119.58c2.23,3.73-5.62,3.1-7.66,3.02-4.53-.16-9.12-.84-13.65-1-8.36-.28-17.56.75-25.66.26-1.82-.11-6.3-.39-5.11-3.18.86-2.03,7.56-2.65,9.64-3.3,9.54-2.98,6.22-10.69,4.47-18.14-1.41-6.02-3.21-11.97-5.09-17.85-.44-.65-2.13-.93-2.91-.99-10.85-.92-22.98.72-33.96,0-1.86.02-2.54,1.43-3.16,2.95-2.38,5.88-5.69,16.95-6.84,23.17-1.74,9.37,6.11,10.15,12.4,12.75,3.5,1.44,4.82,4.18.07,4.59-7.34.63-15.86-.58-23.46-.26-4.41.18-16.23,2.23-19.57.06-2.88-1.87,1.32-4.03,2.94-4.73,7.32-3.14,11.38-3.58,15.59-11.26,4.01-7.31,7.56-17.21,10.82-25.06,7.92-19.08,16.27-39.36,22.84-58.91,1.16-3.46,2.32-6.79,2.72-10.46.59-.98,6.19-1.36,7.82-4.63.39-.78,1.22-4.13,2.04-4.31.48-.1.83.89.96,1.22,2.85,6.9,5.01,16.05,7.39,23.36,7.79,23.89,15.46,48.4,24.23,71.92,2.19,5.87,5.03,12.91,11,15.85,3.18,1.57,10.53,2.18,12.17,4.92ZM466.8,67.76c-3.53-11.93-7.6-24.22-11.54-36.05-.31-.94-2.23-7.17-2.81-7.19l-17.43,47.42,1.79.65c9.53-.57,19.88.72,29.32,0,.52-.04,1.04-.12,1.52-.31.55-.43-.63-3.77-.86-4.52ZM239.54,3.11c-3.33-1.58-14.46-.2-18.67-.11-8.14.16-17.3-.9-25.18-.27-2.3.18-6.2,1.18-3.4,3.91,1.98,1.93,7.37,1.79,10.53,3.69,7.1,4.3,5.09,11.31,2.85,17.82-7.46,21.71-17.07,43.11-24.79,64.77-.54.9-.78,1.04-1.55.17-8.13-22.35-17.32-44.35-25.38-66.72-2.84-7.88-6.4-14.28,4.2-17.23,2.57-.71,7.98-.84,9.72-2.47,3.36-3.14-1.75-4.17-4.2-4.21-8.98-.15-18.29.7-27.47.53-5.11-.09-10.59-1.15-15.68-.45-1.15.16-3.17.79-2.89,2.22.5,2.6,6.3,3.57,8.47,4.51,4.36,1.9,7.23,5.63,9.19,9.84,11.23,30.3,22.94,60.45,34.03,90.8,1.23,3.37,2.39,8.37,3.86,11.36.88,1.79,2.98,1.91,4.04.2,1.75-2.79,2.87-8.12,4.1-11.38,11.25-29.77,24.81-58.75,36.47-88.36,3.05-5.35,7.23-10.25,13.1-12.54,2.17-.84,8.86-1.81,9.54-3.92.37-1.15.13-1.68-.9-2.17ZM379.89,94.52c-2.6,3.49-4.2,7.11-7.36,10.57-14.56,15.95-38.24,15.54-54.67,2.6-30.52-24.04-30.65-80.08,7.92-96.35,14.18-5.98,40.56-5.05,48.45,10.41,2.08,4.07,2.66,8.47,4.32,12.36,1.38,3.24,6.15,2.06,6.18-.69,0-.45-.26-.96-.27-1.49-.04-5.79-.45-14-1.51-19.64-1.06-5.62-6.96-5.91-11.67-7-10.41-2.43-20.2-3.43-30.94-2.79-26.87,1.61-55.13,20.3-61.35,47.46-7.78,33.99,14.76,63.93,47.65,71.1,13.43,2.93,32.43,1.78,45.57-2.35,2.37-.74,6.15-1.87,7.64-3.82,1.99-2.59,6.21-16.24,6.1-19.5-.13-3.75-4.13-3.47-6.06-.88ZM540.76,40.37c-9.15-9.49-6.14-26.4,6.75-30.65,12.77-4.21,21.02,1.1,26.83,12.2.83,1.59,2.15,5.53,3.08,6.58,1.48,1.67,6.85,2.79,7.2-.26.41-3.58-2.23-14.59-3.67-18.12-1.56-3.82-4.67-4.48-8.28-5.59-6.22-1.9-11.8-2.52-18.33-2.09-14.96.98-28.37,8.88-31.74,24.23-5.42,24.66,15.12,32.6,31.92,43.77,6.76,4.49,13.12,8.43,15.41,16.78,7.74,28.29-26.73,40.58-40.44,16.4-2.44-4.31-3-8.05-4.71-12.38-1.25-3.17-6.66-2.23-6.58,1.11.08,3.65.4,8.23.76,11.88.79,8.02,2.41,10.11,9.5,13.78,22.74,11.79,55.6.83,57.39-27.4,1.88-29.62-29.07-33.62-45.09-50.24Z\"\/>\n<\/svg>\n    <\/div>\n<\/div>"},"blocks":{}},"text_kfVmdT":{"type":"text","name":"t:names.heading","disabled":true,"settings":{"text":"<h2>GV CASA<\/h2>","width":"fit-content","max_width":"narrow","alignment":"left","type_preset":"h2","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_FyCjPr":{"type":"text","name":"t:names.text","settings":{"text":"<p>GV CASA<strong> <\/strong>is a collection translating Gert Voorjans’ artistic vision into objects that embody colour, craft and character. Together they shape interiors that feel true, meaningful and unmistakably yours.<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"custom","font":"var(--font-body--family)","font_size":"1.25rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"balance","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":14,"padding-block-end":14,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["custom_liquid_gNPPLY","text_kfVmdT","text_FyCjPr"],"name":"Heading","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"section_width":"page-width","section_height":"custom","section_height_custom":25,"color_scheme":"scheme-2","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":48,"padding-block-end":77}},"media_with_content_W9Yt3B":{"type":"media-with-content","blocks":{"media":{"type":"_media-without-appearance","static":true,"settings":{"media_type":"image","image":"shopify:\/\/shop_images\/GV_CASA_AIR_Homepage_Overview.png","link":"","video_loop":true,"video_autoplay":false,"image_position":"cover","video_position":"cover"},"blocks":{}},"content":{"type":"_content-without-appearance","static":true,"settings":{"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":24},"blocks":{"text_dgXTdx":{"type":"text","name":"t:names.caption","settings":{"text":"<p>EXTRAIT DE PARFUM<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"custom","font":"var(--font-body--family)","font_size":"0.625rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"group_PNWyVB":{"type":"group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"text_RJxJWC":{"type":"text","name":"t:names.heading","settings":{"text":"<h2>Our signature fragrance<\/h2>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h2","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_KrNgLG":{"type":"text","settings":{"text":"<p>Transparent and weightless, like sunlight passing through sheer fabric.  Amber warms it gently, while patchouli grounds it with subtle depth.<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["text_RJxJWC","text_KrNgLG"]},"button_4FLA9w":{"type":"button","settings":{"label":"PRE-ORDER","link":"shopify:\/\/products\/air-extrait-de-parfum","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":0,"width_mobile":"fit-content","custom_width_mobile":0},"blocks":{}}},"block_order":["text_dgXTdx","group_PNWyVB","button_4FLA9w"]}},"name":"t:names.editorial","settings":{"media_position":"left","media_width":"medium","media_height":"100svh","section_width":"page-width","extend_media":true,"color_scheme":"scheme-2","padding-block-start":0,"padding-block-end":100}},"media_with_content_Q3M9hT":{"type":"media-with-content","blocks":{"media":{"type":"_media-without-appearance","static":true,"settings":{"media_type":"image","image":"shopify:\/\/shop_images\/GVCASA-JOYCollection-OceanRugTopViewNatural.png","link":"","video_loop":true,"video_autoplay":false,"image_position":"cover","video_position":"cover"},"blocks":{}},"content":{"type":"_content-without-appearance","static":true,"settings":{"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":24},"blocks":{"text_xD77kx":{"type":"text","name":"t:names.caption","settings":{"text":"<p>JOY COLLECTION<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"custom","font":"var(--font-body--family)","font_size":"0.625rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"group_tFKd6r":{"type":"group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"text_pbr7KL":{"type":"text","name":"t:names.heading","settings":{"text":"<h2>The floor as our canvas<\/h2>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h2","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_pxG9Xk":{"type":"text","settings":{"text":"<p>Each carpet beckons with the promise of transformation, offering the beholder a chance to reimagine their space as a sanctuary, a haven imbued with warmth and vibrancy.<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["text_pbr7KL","text_pxG9Xk"]},"button_jNtyXJ":{"type":"button","settings":{"label":"DISCOVER","link":"shopify:\/\/collections\/joy-exclusive-rugs","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["text_xD77kx","group_tFKd6r","button_jNtyXJ"]}},"name":"t:names.editorial","settings":{"media_position":"right","media_width":"medium","media_height":"100svh","section_width":"page-width","extend_media":false,"color_scheme":"scheme-2","padding-block-start":0,"padding-block-end":100}},"media_with_content_jDQjYh":{"type":"media-with-content","blocks":{"media":{"type":"_media-without-appearance","static":true,"settings":{"media_type":"image","image":"shopify:\/\/shop_images\/FLAIR_-01.jpg","link":"","video_loop":true,"video_autoplay":false,"image_position":"cover","video_position":"cover"},"blocks":{}},"content":{"type":"_content-without-appearance","static":true,"settings":{"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":24},"blocks":{"text_TAY6k4":{"type":"text","name":"t:names.caption","settings":{"text":"<p>FLAIR FOR JIM THOMPSON<\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"custom","font":"var(--font-body--family)","font_size":"0.625rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"group_r3tzD3":{"type":"group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fit-content","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","link":"","open_in_new_tab":false,"placeholder":"","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"text_HQJjkP":{"type":"text","name":"t:names.heading","settings":{"text":"<h2>A journey <br\/>amongst the <br\/>Silk Road<\/h2>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h2","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"text_3MMWpr":{"type":"text","settings":{"text":"<p>The 'Flair Collection' captures the vibrant essence of the Silk Road. From Bangkok to Paris, luxurious silk fabrics and intricate wallpapers celebrate the rich heritage of art, culture, and human emotion.<br\/><br\/><\/p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["text_HQJjkP","text_3MMWpr"]},"button_Ng3izr":{"type":"button","settings":{"label":"DISCOVER  NOW","link":"shopify:\/\/collections\/flair","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["text_TAY6k4","group_r3tzD3","button_Ng3izr"]}},"name":"t:names.editorial","settings":{"media_position":"left","media_width":"medium","media_height":"100svh","section_width":"full-width","extend_media":true,"color_scheme":"scheme-2","padding-block-start":0,"padding-block-end":100}}},"order":["slideshow_X7LGWE","section_MgkEX9","media_with_content_W9Yt3B","media_with_content_Q3M9hT","media_with_content_jDQjYh"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_X7LGWE": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_gcxdXV": {
+          "type": "_slide",
+          "settings": {
+            "media_type_1": "video",
+            "image_1": "shopify://shop_images/Home_Image.png",
+            "video_1": "shopify://files/videos/GV CASA HOME INTRO.mp4",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 0,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "toggle_overlay": false,
+            "overlay_color": "#2022191c",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "slide_87Y3Rj": {
+          "type": "_slide",
+          "settings": {
+            "media_type_1": "image",
+            "image_1": "shopify://shop_images/GV-CASA-Background.jpg",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "toggle_overlay": true,
+            "overlay_color": "#2022191c",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_rcwi9i": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 50,
+                "width_mobile": "custom",
+                "custom_width_mobile": 57,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-6",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 48,
+                "padding-block-end": 48,
+                "padding-inline-start": 48,
+                "padding-inline-end": 48
+              },
+              "blocks": {
+                "image_b76U7n": {
+                  "type": "image",
+                  "name": "t:names.image",
+                  "settings": {
+                    "image": "shopify://shop_images/Label_Air_GV_6224c839-e96c-4f5d-aa5a-cc318864d0ad.png",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_A4XBTG": {
+                  "type": "text",
+                  "disabled": true,
+                  "settings": {
+                    "text": "<h2>Extrait de parfum</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_D8yL6f": {
+                  "type": "text",
+                  "disabled": true,
+                  "settings": {
+                    "text": "<p><em>Amber. Patchouli. Air.</em></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1.25rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 20,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "button_dA3g33": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Discover More",
+                    "link": "shopify://collections/air",
+                    "open_in_new_tab": false,
+                    "style_class": "button-secondary",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_b76U7n",
+                "text_A4XBTG",
+                "text_D8yL6f",
+                "button_dA3g33"
+              ]
+            }
+          },
+          "block_order": [
+            "group_rcwi9i"
+          ]
+        },
+        "slide_fNhbhg": {
+          "type": "_slide",
+          "disabled": true,
+          "settings": {
+            "media_type_1": "image",
+            "image_1": "shopify://shop_images/vulcano_main.png",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 12,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "toggle_overlay": false,
+            "overlay_color": "#2022191c",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_TMABhM": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 50,
+                "width_mobile": "custom",
+                "custom_width_mobile": 85,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-6",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 48,
+                "padding-block-end": 100,
+                "padding-inline-start": 48,
+                "padding-inline-end": 48
+              },
+              "blocks": {
+                "text_7kKhzP": {
+                  "type": "text",
+                  "disabled": true,
+                  "settings": {
+                    "text": "<h2>VULCANO</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_EnLCkA": {
+                  "type": "text",
+                  "disabled": true,
+                  "settings": {
+                    "text": "<p>a Mythical Creature of JOY</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 20,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "button_aL7zPX": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Discover More",
+                    "link": "shopify://products/vulcano",
+                    "open_in_new_tab": false,
+                    "style_class": "button-secondary",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_7kKhzP",
+                "text_EnLCkA",
+                "button_aL7zPX"
+              ]
+            }
+          },
+          "block_order": [
+            "group_TMABhM"
+          ]
+        }
+      },
+      "block_order": [
+        "slide_gcxdXV",
+        "slide_87Y3Rj",
+        "slide_fNhbhg"
+      ],
+      "name": "t:names.slideshow",
+      "settings": {
+        "icons_style": "arrow",
+        "slideshow_controls_style": "dots",
+        "color_scheme": "scheme-5",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "section_width": "full-width",
+        "slide_height": "large",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "section_MgkEX9": {
+      "type": "section",
+      "blocks": {
+        "custom_liquid_gNPPLY": {
+          "type": "custom-liquid",
+          "name": "t:names.custom_liquid",
+          "settings": {
+            "custom_liquid": "<div> \n    <div id=\"gv-svg-new-position\" class=\"gvc-overlap-svg-container\">\n        <svg id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 720 125\">\n  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->\n  <path d=\"M118.27,72.4c-2.05,3.25-7.99,1.79-10.1,7.6-1.5,4.12-2.24,17.01-1.74,21.44.27,2.42,1.6,3.18,2.91,4.7.82.96.61,2.4.04,3.47-.51.96-3.62,1.59-4.85,2.13-9.81,4.24-16.78,8.07-27.72,9.93C34.4,128.9-5.45,94.85,4.82,50.73,10.99,24.19,36.61,3.89,63.68,2.4c10.52-.58,27.05,1.79,37.28,4.61,3.11.86,4.49.89,5.16,4.31.73,3.75,2.19,15.47,1.51,18.81-.38,1.89-2.05,3.29-4,2.37-1.78-.85-3.53-6.54-4.63-8.58-5.54-10.32-17.13-14.22-28.35-14.78C15.66,6.37,3.39,90.53,48.75,111.74c15.34,7.17,44.31,7.18,45.74-15.03.24-3.76.56-10.09.25-13.72-.09-1.05-.4-2.35-1.04-3.19-2.18-2.84-9.88-4.33-13.34-4.86-2.13-.33-4.41.13-6.2-1.28-3.02-2.37.17-5.03,2.98-5.24,1.14-.09,2.01.25,2.99.27,7.9.14,15.8.78,23.71.5,3.28-.12,6.92-.78,10.21-.78,2.11,0,5.88,1.38,4.23,4ZM712.2,121.66c-.6,1.21-6.45,1.03-7.83.98-4.53-.15-9.13-.84-13.66-1-8.36-.29-17.56.75-25.67.26-1.56-.09-6.68-.49-5.1-3.16,1.32-2.23,7.02-2.54,9.44-3.27,9.25-2.78,6.61-9.43,4.96-16.77-1.47-6.54-3.36-13.04-5.53-19.37-.48-.59-2.01-.82-2.77-.89-10.85-.92-22.98.72-33.97,0-2.05.05-2.67,1.64-3.29,3.3-1.89,4.99-3.64,11.24-5.05,16.43-1.42,5.23-3.9,10.59.9,14.82,3.18,2.8,6.25,2.84,9.84,4.33,3.5,1.44,4.75,4.19.07,4.59-7.34.63-15.86-.58-23.47-.26-4.41.18-16.24,2.23-19.58.06-2.88-1.87,1.32-4.04,2.94-4.73,7.91-3.4,11.82-3.81,16.09-12.24,4.82-9.51,9.2-21.18,13.26-31.17,4.76-11.69,9.32-23.5,13.75-35.32,2.46-6.56,5.53-13.71,7.45-20.37.62-2.14,1.15-4.3,1.27-6.54.4-.83,6.22-1.54,7.88-4.58.51-.93,1.18-4.22,2.16-4.44.33-.07.42.17.56.39,8.59,26.28,16.81,52.7,25.92,78.8,2.09,6,4.11,12.12,6.35,18.06,2.78,7.37,5.55,13.54,13.55,16.23,2.07.7,11.47,1.96,9.54,5.85ZM664.02,65.58c-3.64-11.94-7.52-24.25-11.54-36.06-.24-.7-1.56-4.98-2.08-4.99l-17.43,47.43,1.79.65c9.59-.51,19.82.65,29.33,0,.53-.04,1.04-.17,1.55-.28.48-.57-1.3-5.73-1.62-6.75ZM514.07,119.58c2.23,3.73-5.62,3.1-7.66,3.02-4.53-.16-9.12-.84-13.65-1-8.36-.28-17.56.75-25.66.26-1.82-.11-6.3-.39-5.11-3.18.86-2.03,7.56-2.65,9.64-3.3,9.54-2.98,6.22-10.69,4.47-18.14-1.41-6.02-3.21-11.97-5.09-17.85-.44-.65-2.13-.93-2.91-.99-10.85-.92-22.98.72-33.96,0-1.86.02-2.54,1.43-3.16,2.95-2.38,5.88-5.69,16.95-6.84,23.17-1.74,9.37,6.11,10.15,12.4,12.75,3.5,1.44,4.82,4.18.07,4.59-7.34.63-15.86-.58-23.46-.26-4.41.18-16.23,2.23-19.57.06-2.88-1.87,1.32-4.03,2.94-4.73,7.32-3.14,11.38-3.58,15.59-11.26,4.01-7.31,7.56-17.21,10.82-25.06,7.92-19.08,16.27-39.36,22.84-58.91,1.16-3.46,2.32-6.79,2.72-10.46.59-.98,6.19-1.36,7.82-4.63.39-.78,1.22-4.13,2.04-4.31.48-.1.83.89.96,1.22,2.85,6.9,5.01,16.05,7.39,23.36,7.79,23.89,15.46,48.4,24.23,71.92,2.19,5.87,5.03,12.91,11,15.85,3.18,1.57,10.53,2.18,12.17,4.92ZM466.8,67.76c-3.53-11.93-7.6-24.22-11.54-36.05-.31-.94-2.23-7.17-2.81-7.19l-17.43,47.42,1.79.65c9.53-.57,19.88.72,29.32,0,.52-.04,1.04-.12,1.52-.31.55-.43-.63-3.77-.86-4.52ZM239.54,3.11c-3.33-1.58-14.46-.2-18.67-.11-8.14.16-17.3-.9-25.18-.27-2.3.18-6.2,1.18-3.4,3.91,1.98,1.93,7.37,1.79,10.53,3.69,7.1,4.3,5.09,11.31,2.85,17.82-7.46,21.71-17.07,43.11-24.79,64.77-.54.9-.78,1.04-1.55.17-8.13-22.35-17.32-44.35-25.38-66.72-2.84-7.88-6.4-14.28,4.2-17.23,2.57-.71,7.98-.84,9.72-2.47,3.36-3.14-1.75-4.17-4.2-4.21-8.98-.15-18.29.7-27.47.53-5.11-.09-10.59-1.15-15.68-.45-1.15.16-3.17.79-2.89,2.22.5,2.6,6.3,3.57,8.47,4.51,4.36,1.9,7.23,5.63,9.19,9.84,11.23,30.3,22.94,60.45,34.03,90.8,1.23,3.37,2.39,8.37,3.86,11.36.88,1.79,2.98,1.91,4.04.2,1.75-2.79,2.87-8.12,4.1-11.38,11.25-29.77,24.81-58.75,36.47-88.36,3.05-5.35,7.23-10.25,13.1-12.54,2.17-.84,8.86-1.81,9.54-3.92.37-1.15.13-1.68-.9-2.17ZM379.89,94.52c-2.6,3.49-4.2,7.11-7.36,10.57-14.56,15.95-38.24,15.54-54.67,2.6-30.52-24.04-30.65-80.08,7.92-96.35,14.18-5.98,40.56-5.05,48.45,10.41,2.08,4.07,2.66,8.47,4.32,12.36,1.38,3.24,6.15,2.06,6.18-.69,0-.45-.26-.96-.27-1.49-.04-5.79-.45-14-1.51-19.64-1.06-5.62-6.96-5.91-11.67-7-10.41-2.43-20.2-3.43-30.94-2.79-26.87,1.61-55.13,20.3-61.35,47.46-7.78,33.99,14.76,63.93,47.65,71.1,13.43,2.93,32.43,1.78,45.57-2.35,2.37-.74,6.15-1.87,7.64-3.82,1.99-2.59,6.21-16.24,6.1-19.5-.13-3.75-4.13-3.47-6.06-.88ZM540.76,40.37c-9.15-9.49-6.14-26.4,6.75-30.65,12.77-4.21,21.02,1.1,26.83,12.2.83,1.59,2.15,5.53,3.08,6.58,1.48,1.67,6.85,2.79,7.2-.26.41-3.58-2.23-14.59-3.67-18.12-1.56-3.82-4.67-4.48-8.28-5.59-6.22-1.9-11.8-2.52-18.33-2.09-14.96.98-28.37,8.88-31.74,24.23-5.42,24.66,15.12,32.6,31.92,43.77,6.76,4.49,13.12,8.43,15.41,16.78,7.74,28.29-26.73,40.58-40.44,16.4-2.44-4.31-3-8.05-4.71-12.38-1.25-3.17-6.66-2.23-6.58,1.11.08,3.65.4,8.23.76,11.88.79,8.02,2.41,10.11,9.5,13.78,22.74,11.79,55.6.83,57.39-27.4,1.88-29.62-29.07-33.62-45.09-50.24Z\"/>\n</svg>\n    </div>\n</div>"
+          },
+          "blocks": {}
+        },
+        "text_kfVmdT": {
+          "type": "text",
+          "name": "t:names.heading",
+          "disabled": true,
+          "settings": {
+            "text": "<h2>GV CASA</h2>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_FyCjPr": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>GV CASA<strong> </strong>is a collection translating Gert Voorjans’ artistic vision into objects that embody colour, craft and character. Together they shape interiors that feel true, meaningful and unmistakably yours.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "1.25rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "balance",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 14,
+            "padding-block-end": 14,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "custom_liquid_gNPPLY",
+        "text_kfVmdT",
+        "text_FyCjPr"
+      ],
+      "name": "Heading",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "custom",
+        "section_height_custom": 25,
+        "color_scheme": "scheme-2",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 48,
+        "padding-block-end": 77
+      }
+    },
+    "gv_product_stack_JGcNiT": {
+      "type": "gv-product-stack",
+      "blocks": {
+        "product_Y8fR9E": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "width": 60,
+            "rotation": 0
+          }
+        },
+        "product_wAGiQt": {
+          "type": "product",
+          "settings": {
+            "product": "autumn-candy-ceramic-tabouret-n-10",
+            "width": 60,
+            "rotation": 0
+          }
+        },
+        "product_tWkWht": {
+          "type": "product",
+          "settings": {
+            "product": "il-gatopardo",
+            "width": 60,
+            "rotation": 0
+          }
+        },
+        "product_nY6E3K": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "width": 60,
+            "rotation": 0
+          }
+        }
+      },
+      "block_order": [
+        "product_Y8fR9E",
+        "product_wAGiQt",
+        "product_tWkWht",
+        "product_nY6E3K"
+      ],
+      "name": "GV Product Stack",
+      "settings": {
+        "background_color": "#f9f9f9"
+      }
+    },
+    "media_with_content_W9Yt3B": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/GV_CASA_AIR_Homepage_Overview.png",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
+          },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24
+          },
+          "blocks": {
+            "text_dgXTdx": {
+              "type": "text",
+              "name": "t:names.caption",
+              "settings": {
+                "text": "<p>EXTRAIT DE PARFUM</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.625rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_PNWyVB": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_RJxJWC": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h2>Our signature fragrance</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_KrNgLG": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Transparent and weightless, like sunlight passing through sheer fabric.  Amber warms it gently, while patchouli grounds it with subtle depth.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_RJxJWC",
+                "text_KrNgLG"
+              ]
+            },
+            "button_4FLA9w": {
+              "type": "button",
+              "settings": {
+                "label": "PRE-ORDER",
+                "link": "shopify://products/air-extrait-de-parfum",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 0,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_dgXTdx",
+            "group_PNWyVB",
+            "button_4FLA9w"
+          ]
+        }
+      },
+      "name": "t:names.editorial",
+      "settings": {
+        "media_position": "left",
+        "media_width": "medium",
+        "media_height": "100svh",
+        "section_width": "page-width",
+        "extend_media": true,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 0,
+        "padding-block-end": 100
+      }
+    },
+    "media_with_content_Q3M9hT": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/GVCASA-JOYCollection-OceanRugTopViewNatural.png",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
+          },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24
+          },
+          "blocks": {
+            "text_xD77kx": {
+              "type": "text",
+              "name": "t:names.caption",
+              "settings": {
+                "text": "<p>JOY COLLECTION</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.625rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_tFKd6r": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_pbr7KL": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h2>The floor as our canvas</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_pxG9Xk": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Each carpet beckons with the promise of transformation, offering the beholder a chance to reimagine their space as a sanctuary, a haven imbued with warmth and vibrancy.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_pbr7KL",
+                "text_pxG9Xk"
+              ]
+            },
+            "button_jNtyXJ": {
+              "type": "button",
+              "settings": {
+                "label": "DISCOVER",
+                "link": "shopify://collections/joy-exclusive-rugs",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_xD77kx",
+            "group_tFKd6r",
+            "button_jNtyXJ"
+          ]
+        }
+      },
+      "name": "t:names.editorial",
+      "settings": {
+        "media_position": "right",
+        "media_width": "medium",
+        "media_height": "100svh",
+        "section_width": "page-width",
+        "extend_media": false,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 0,
+        "padding-block-end": 100
+      }
+    },
+    "media_with_content_jDQjYh": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/FLAIR_-01.jpg",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
+          },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24
+          },
+          "blocks": {
+            "text_TAY6k4": {
+              "type": "text",
+              "name": "t:names.caption",
+              "settings": {
+                "text": "<p>FLAIR FOR JIM THOMPSON</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.625rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_r3tzD3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_HQJjkP": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h2>A journey <br/>amongst the <br/>Silk Road</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_3MMWpr": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>The 'Flair Collection' captures the vibrant essence of the Silk Road. From Bangkok to Paris, luxurious silk fabrics and intricate wallpapers celebrate the rich heritage of art, culture, and human emotion.<br/><br/></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_HQJjkP",
+                "text_3MMWpr"
+              ]
+            },
+            "button_Ng3izr": {
+              "type": "button",
+              "settings": {
+                "label": "DISCOVER  NOW",
+                "link": "shopify://collections/flair",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_TAY6k4",
+            "group_r3tzD3",
+            "button_Ng3izr"
+          ]
+        }
+      },
+      "name": "t:names.editorial",
+      "settings": {
+        "media_position": "left",
+        "media_width": "medium",
+        "media_height": "100svh",
+        "section_width": "full-width",
+        "extend_media": true,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 0,
+        "padding-block-end": 100
+      }
+    }
+  },
+  "order": [
+    "slideshow_X7LGWE",
+    "section_MgkEX9",
+    "gv_product_stack_JGcNiT",
+    "media_with_content_W9Yt3B",
+    "media_with_content_Q3M9hT",
+    "media_with_content_jDQjYh"
+  ]
+}
