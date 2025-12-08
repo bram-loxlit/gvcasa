@@ -437,6 +437,7 @@
         "text_kfVmdT",
         "text_FyCjPr"
       ],
+      "disabled": true,
       "name": "Heading",
       "settings": {
         "content_direction": "column",
@@ -464,53 +465,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 48,
         "padding-block-end": 77
-      }
-    },
-    "gv_product_stack_JGcNiT": {
-      "type": "gv-product-stack",
-      "blocks": {
-        "product_Y8fR9E": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "width": 60,
-            "rotation": 0
-          }
-        },
-        "product_wAGiQt": {
-          "type": "product",
-          "settings": {
-            "product": "autumn-candy-ceramic-tabouret-n-10",
-            "width": 60,
-            "rotation": 0
-          }
-        },
-        "product_tWkWht": {
-          "type": "product",
-          "settings": {
-            "product": "il-gatopardo",
-            "width": 60,
-            "rotation": 0
-          }
-        },
-        "product_nY6E3K": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "width": 60,
-            "rotation": 0
-          }
-        }
-      },
-      "block_order": [
-        "product_Y8fR9E",
-        "product_wAGiQt",
-        "product_tWkWht",
-        "product_nY6E3K"
-      ],
-      "name": "GV Product Stack",
-      "settings": {
-        "background_color": "#f9f9f9"
       }
     },
     "media_with_content_W9Yt3B": {
@@ -683,6 +637,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "t:names.editorial",
       "settings": {
         "media_position": "left",
@@ -865,6 +820,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "t:names.editorial",
       "settings": {
         "media_position": "right",
@@ -1047,6 +1003,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "t:names.editorial",
       "settings": {
         "media_position": "left",
@@ -1058,14 +1015,108 @@
         "padding-block-start": 0,
         "padding-block-end": 100
       }
+    },
+    "gvc_collage_staggered_XWeUTE": {
+      "type": "gvc-collage-staggered",
+      "blocks": {
+        "image_hPRxtx": {
+          "type": "image",
+          "settings": {
+            "alt": "Alt text",
+            "link": "",
+            "caption": "Caption",
+            "aspect": "auto",
+            "span_columns": 2,
+            "span_rows": 2
+          }
+        },
+        "image_WVnDFg": {
+          "type": "image",
+          "settings": {
+            "alt": "Alt text",
+            "link": "",
+            "caption": "Caption",
+            "aspect": "auto",
+            "span_columns": 1,
+            "span_rows": 1
+          }
+        },
+        "image_krk7X6": {
+          "type": "image",
+          "settings": {
+            "alt": "Alt text",
+            "link": "",
+            "caption": "Caption",
+            "aspect": "auto",
+            "span_columns": 3,
+            "span_rows": 1
+          }
+        },
+        "image_inhprG": {
+          "type": "image",
+          "settings": {
+            "alt": "Alt text",
+            "link": "",
+            "caption": "Caption",
+            "aspect": "auto",
+            "span_columns": 1,
+            "span_rows": 1
+          }
+        },
+        "image_wz39cX": {
+          "type": "image",
+          "settings": {
+            "alt": "Alt text",
+            "link": "",
+            "caption": "Caption",
+            "aspect": "auto",
+            "span_columns": 2,
+            "span_rows": 2
+          }
+        },
+        "image_gEbGJW": {
+          "type": "image",
+          "settings": {
+            "alt": "Alt text",
+            "link": "",
+            "caption": "Caption",
+            "aspect": "auto",
+            "span_columns": 1,
+            "span_rows": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_hPRxtx",
+        "image_WVnDFg",
+        "image_krk7X6",
+        "image_inhprG",
+        "image_wz39cX",
+        "image_gEbGJW"
+      ],
+      "name": "Collage preset A (staggered)",
+      "settings": {
+        "heading": "GV AT HOME",
+        "subheading": "Default subheading",
+        "heading_align": "left",
+        "max_width": "page",
+        "max_width_custom": "1400px",
+        "bg": "#ffffff",
+        "gap": "28px",
+        "pad_y": "48px",
+        "radius": "0",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1
+      }
     }
   },
   "order": [
     "slideshow_X7LGWE",
     "section_MgkEX9",
-    "gv_product_stack_JGcNiT",
     "media_with_content_W9Yt3B",
     "media_with_content_Q3M9hT",
-    "media_with_content_jDQjYh"
+    "media_with_content_jDQjYh",
+    "gvc_collage_staggered_XWeUTE"
   ]
 }
