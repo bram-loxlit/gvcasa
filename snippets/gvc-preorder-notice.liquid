@@ -1,0 +1,37 @@
+{%- comment -%}
+  gvc-preorder-notice.liquid
+  Displays availability text for preorder products.
+  Uses product.metafields.gvcasa.availability_date (Single line text).
+{%- endcomment -%}
+
+{%- assign date_text = product.metafields.gvcasa.availability_date -%}
+{%- if template.suffix == 'preorder' and date_text != blank -%}
+  <div class="gvc-preorder-note" role="note" aria-live="polite">
+    <span class="gvc-preorder-badge">PRE-ORDER :</span>
+    <span class="gvc-preorder-text">Estimated availability {{ date_text }}</span>
+  </div>
+  <style>
+  .gvc-preorder-note {
+display: flex;
+  gap: 0.8rem; /* was 0.6rem */
+  align-items: baseline; /* instead of center, so typography aligns on text line */
+  margin: 0.6rem 0 1rem 0;
+  }
+  .gvc-preorder-badge {
+    font-size: .75rem;
+    letter-spacing: .05em;
+    padding: .25rem .5rem;
+    text-transform: uppercase;
+    border: none; /* removed box */
+    font-weight: 600;
+  }
+  .gvc-preorder-text {
+    font-size: .75rem;
+    letter-spacing: .05em;
+    padding: .25rem .5rem;
+    text-transform: uppercase;
+    border: none; /* removed box */
+    font-weight: 600;
+  }
+</style>
+{%- endif -%}

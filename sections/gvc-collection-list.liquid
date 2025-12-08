@@ -1,0 +1,210 @@
+{% comment %}
+  GVC Collection List — menu-driven, products + collections (no limit)
+  • Header: left-aligned inside page-width container (theme-friendly spacing)
+  • Collections: use theme's native _collection-card to preserve Editorial layout
+    + add title underneath
+  • Products: custom card with full overlay link and metafield image override
+  • No schema-defined blocks (compatible with themes that use static blocks)
+{% endcomment %}
+
+{% liquid
+  assign section_items = nil
+
+  # Build list from Navigation menu in exact order
+  if section.settings.collections_menu != blank
+    assign menu = linklists[section.settings.collections_menu]
+    if menu and menu.links.size > 0
+      assign pipe = ''
+      for l in menu.links
+        assign item_type = ''
+        assign handle = ''
+
+        if l.object and l.object_type == 'collection'
+          assign item_type = 'c'
+          assign handle = l.object.handle
+        elsif l.object and l.object_type == 'product'
+          assign item_type = 'p'
+          assign handle = l.object.handle
+        endif
+
+        if item_type == '' and l.url contains '/collections/'
+          assign item_type = 'c'
+          assign handle = l.url | split: '/collections/' | last | split: '?' | first | split: '/' | first
+        endif
+        if item_type == '' and l.url contains '/products/'
+          assign item_type = 'p'
+          assign handle = l.url | split: '/products/' | last | split: '?' | first | split: '/' | first
+        endif
+
+        if item_type != '' and handle != ''
+          assign token = item_type | append: '::' | append: handle
+          if pipe == ''
+            assign pipe = token
+          else
+            assign pipe = pipe | append: '|' | append: token
+          endif
+        endif
+      endfor
+
+      if pipe != ''
+        assign section_items = pipe | split: '|'
+      endif
+    endif
+  endif
+
+  # Fallback: manual picker for collections
+  if section_items == nil and section.settings.collection_list != blank
+    assign pipe = ''
+    for c in section.settings.collection_list
+      assign token = 'c::' | append: c.handle
+      if pipe == ''
+        assign pipe = token
+      else
+        assign pipe = pipe | append: '|' | append: token
+      endif
+    endfor
+    if pipe != ''
+      assign section_items = pipe | split: '|'
+    endif
+  endif
+%}
+
+{%- capture empty_state -%}
+  <div class="resource-list__empty page-width">
+    <p>No items to show. Choose a “Collections menu” or add items in “Collection list”.</p>
+  </div>
+{%- endcapture -%}
+
+{%- comment -%} Section heading/subheading (left-aligned) {%- endcomment -%}
+{% if section.settings.title != blank or section.settings.subheading != blank %}
+  <div class="page-width" style="margin: 0 0 var(--space-6,24px);">
+    {% if section.settings.title != blank %}
+      <h2 class="h1" style="margin:0 0 .5em 0;">{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <p style="margin:0;">{{ section.settings.subheading }}</p>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% capture list_items %}
+  {% if section_items != nil %}
+    {% for token in section_items %}
+      {% assign parts = token | split: '::' %}
+      {% assign kind = parts[0] %}
+      {% assign handle = parts[1] | default: '' %}
+
+      {% assign collection = nil %}
+      {% assign product = nil %}
+
+      {% if kind == 'c' and handle != '' %}
+        {% assign collection = collections[handle] %}
+      {% elsif kind == 'p' and handle != '' %}
+        {% assign product = all_products[handle] %}
+      {% endif %}
+
+      {% if collection %}
+        <div class="resource-list__item">
+          {% comment %} Use native card to keep gap/height math intact {% endcomment %}
+          {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
+          <p class="h2" style="margin-top:var(--space-2,8px);">{{ collection.title }}</p>
+        </div>
+        {% unless forloop.last %}<!--@list/split-->{% endunless %}
+
+      {% elsif product %}
+        <div class="resource-list__item">
+          <div class="collection-card">
+            <a class="collection-card__link" href="{{ product.url }}" aria-label="{{ product.title | escape }}"></a>
+            <div class="collection-card__inner">
+              <div class="collection-card__image">
+                {% liquid
+                  assign override_img = product.metafields.gvc.collection_card_image
+                  assign display_img = override_img | default: product.featured_image
+                %}
+                {% if display_img %}
+                  <img
+                    src="{{ display_img | image_url: width: 1920 }}"
+                    alt="{{ product.title | escape }}"
+                    loading="lazy">
+                {% endif %}
+              </div>
+              <div class="collection-card__content">
+                <p class="h2">{{ product.title }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% unless forloop.last %}<!--@list/split-->{% endunless %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endcapture %}
+
+{% liquid
+  assign list_items_array = list_items | strip | split: '<!--@list/split-->'
+%}
+
+{% if list_items_array.size == 1 and list_items_array[0] == '' %}
+  {{ empty_state }}
+{% else %}
+  {% render 'resource-list',
+    list_items: list_items,
+    list_items_array: list_items_array,
+    settings: section.settings,
+    slide_count: list_items_array.size,
+    content_type: 'collections',
+    test_id: 'gvc-collection-list'
+  %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "GVC Collection List",
+  "class": "gvc-collection-list",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    { "type": "text", "id": "title", "label": "Heading", "default": "Collections" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Explore our collections" },
+
+    { "type": "link_list", "id": "collections_menu", "label": "Collections menu", "info": "Supports collections and products. Items appear in the menu order." },
+    { "type": "collection_list", "id": "collection_list", "label": "Fallback: manual collections" },
+
+    { "type": "select", "id": "layout_type", "label": "Cards layout", "default": "editorial",
+      "options": [
+        { "value": "grid", "label": "Grid" },
+        { "value": "bento", "label": "Bento" },
+        { "value": "carousel", "label": "Carousel" },
+        { "value": "editorial", "label": "Editorial" }
+      ]
+    },
+    { "type": "range", "id": "columns", "min": 2, "max": 5, "step": 1, "default": 3, "label": "Columns (desktop)" },
+    { "type": "range", "id": "mobile_columns", "min": 1, "max": 3, "step": 1, "default": 2, "label": "Columns (mobile)" },
+    { "type": "checkbox", "id": "carousel_on_mobile", "default": false, "label": "Carousel on mobile" },
+    { "type": "range", "id": "columns_gap", "min": 0, "max": 64, "step": 4, "default": 8, "label": "Columns gap" },
+    { "type": "range", "id": "rows_gap", "min": 0, "max": 64, "step": 4, "default": 8, "label": "Rows gap" },
+    { "type": "select", "id": "icons_style", "label": "Icons", "default": "arrow",
+      "options": [
+        { "value": "arrow", "label": "Arrow" },
+        { "value": "none", "label": "None" }
+      ]
+    },
+    { "type": "select", "id": "icons_shape", "label": "Icon shape", "default": "none",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "square", "label": "Square" },
+        { "value": "circle", "label": "Circle" }
+      ]
+    },
+    { "type": "select", "id": "section_width", "label": "Section width", "default": "page-width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ]
+    },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
+  ],
+  "presets": [
+    { "name": "GVC Collection List" }
+  ]
+}
+{% endschema %}
