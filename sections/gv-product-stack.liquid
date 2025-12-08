@@ -1,0 +1,456 @@
+{% comment %}
+  GV Product Stack Section
+  - Sticky stack scroll effect
+  - Custom split-screen modal
+  - Add to Cart functionality
+{% endcomment %}
+
+{% style %}
+  .gv-stack-section {
+    padding: 60px 20px;
+    background-color: {{ section.settings.background_color }};
+    overflow: hidden; /* Prevent sticky cards from breaking layout */
+  }
+
+  .gv-stack-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure enough scroll space */
+  }
+
+  /* Sticky Card Styling */
+  .gv-stack-card {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px; /* Offset from top */
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft luxury shadow */
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.4s ease-out, box-shadow 0.3s ease;
+    margin-bottom: 40px; /* Spacing between cards in flow */
+    border-radius: 4px; /* Minimal rounding */
+  }
+
+  .gv-stack-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    z-index: 10; /* Bring forward on hover */
+  }
+
+  .gv-stack-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gv-stack-card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .gv-stack-card:hover .gv-stack-card__overlay {
+    opacity: 1;
+  }
+
+  .gv-stack-card__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    font-family: var(--font-heading-family);
+  }
+
+  /* Modal Styling */
+  .gv-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.4); /* Backdrop */
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .gv-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .gv-modal__content {
+    background: #fff;
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh; /* Fixed height for split screen */
+    display: flex;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .gv-modal.is-open .gv-modal__content {
+    transform: translateY(0);
+  }
+
+  .gv-modal__image-col {
+    width: 50%;
+    background: #f4f4f4;
+    position: relative;
+  }
+
+  .gv-modal__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gv-modal__info-col {
+    width: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  .gv-modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 2;
+    color: #000;
+  }
+
+  .gv-modal__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: var(--font-heading-family);
+  }
+
+  .gv-modal__price {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .gv-modal__description {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+  }
+
+  .gv-modal__add-to-cart {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+  }
+
+  .gv-modal__add-to-cart:hover {
+    background: #333;
+  }
+  
+  .gv-modal__add-to-cart:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    .gv-modal__content {
+      flex-direction: column;
+      height: 90vh;
+    }
+    .gv-modal__image-col, .gv-modal__info-col {
+      width: 100%;
+      height: 50%;
+    }
+    .gv-modal__info-col {
+      padding: 30px;
+      justify-content: flex-start;
+    }
+  }
+{% endstyle %}
+
+<div class="gv-stack-section">
+  <div class="gv-stack-container">
+    {% for block in section.blocks %}
+      {% assign product = block.settings.product %}
+      {% if product != blank %}
+        <div 
+          class="gv-stack-card" 
+          style="
+            width: {{ block.settings.width }}%;
+            transform: rotate({{ block.settings.rotation }}deg);
+            z-index: {{ forloop.index }};
+          "
+          data-product-id="{{ product.id }}"
+          data-product-handle="{{ product.handle }}"
+          data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+          {{ block.shopify_attributes }}
+        >
+          {% comment %} Embed product data for Modal {% endcomment %}
+          <script type="application/json" class="product-data">
+            {
+              "title": {{ product.title | json }},
+              "price": {{ product.price | money | json }},
+              "description": {{ product.description | json }},
+              "image": {{ product.featured_image | image_url: width: 800 | json }},
+              "available": {{ product.available | json }}
+            }
+          </script>
+
+          {% comment %}
+            Card Display Image: 
+            Use Custom 'Mood' image if set, else Product Featured Image 
+          {% endcomment %}
+          {% assign card_image = product.featured_image %}
+          {% if block.settings.custom_image != blank %}
+            {% assign card_image = block.settings.custom_image %}
+          {% endif %}
+
+          <img 
+            src="{{ card_image | image_url: width: 600 }}" 
+            alt="{{ card_image.alt | escape }}"
+            loading="lazy"
+          >
+          
+          <div class="gv-stack-card__overlay">
+            <h3 class="gv-stack-card__title">{{ product.title }}</h3>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Modal Structure -->
+<div class="gv-modal" id="GVProductModal">
+  <div class="gv-modal__content">
+    <button class="gv-modal__close" aria-label="Close modal">&times;</button>
+    
+    <div class="gv-modal__image-col">
+      <img src="" alt="" class="gv-modal__image" id="ModalImage">
+    </div>
+    
+    <div class="gv-modal__info-col">
+      <h2 class="gv-modal__title" id="ModalTitle"></h2>
+      <div class="gv-modal__price" id="ModalPrice"></div>
+      <div class="gv-modal__description" id="ModalDescription"></div>
+      
+      <form method="post" action="/cart/add" class="gv-modal__form">
+        <input type="hidden" name="id" id="ModalVariantId" value="">
+        <button type="submit" class="gv-modal__add-to-cart" id="ModalAddToCart">
+          Add to Cart
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('GVProductModal');
+    const closeBtn = modal.querySelector('.gv-modal__close');
+    const modalImage = document.getElementById('ModalImage');
+    const modalTitle = document.getElementById('ModalTitle');
+    const modalPrice = document.getElementById('ModalPrice');
+    const modalDesc = document.getElementById('ModalDescription');
+    const modalVariantId = document.getElementById('ModalVariantId');
+    const modalAddToCart = document.getElementById('ModalAddToCart');
+    
+    // Open Modal
+    document.querySelectorAll('.gv-stack-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const dataScript = card.querySelector('.product-data');
+        if(!dataScript) return;
+        
+        const productData = JSON.parse(dataScript.textContent);
+        const variantId = card.dataset.variantId;
+        
+        // Populate Data
+        modalImage.src = productData.image;
+        modalTitle.textContent = productData.title;
+        modalPrice.textContent = productData.price;
+        modalDesc.innerHTML = productData.description; // Description is HTML
+        modalVariantId.value = variantId;
+        
+        // Handle Availability
+        if(productData.available) {
+            modalAddToCart.disabled = false;
+            modalAddToCart.textContent = 'Add to Cart';
+        } else {
+            modalAddToCart.disabled = true;
+            modalAddToCart.textContent = 'Sold Out';
+        }
+
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+      });
+    });
+
+    // Close Modal Logic
+    function closeModal() {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    
+    // Close on backdrop click
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+
+    // AJAX Add to Cart
+    const form = modal.querySelector('form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Adding...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(form);
+
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        // Success
+        submitBtn.textContent = 'Added!';
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            closeModal();
+            // Optional: Open cart drawer if theme supports it
+            // document.dispatchEvent(new CustomEvent('cart:open')); // Common pattern
+            
+            // Standard Shopify pattern requires fetching cart bubble update
+            // For now, just a simple feedback
+        }, 1000);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        submitBtn.textContent = 'Error';
+        setTimeout(() => {
+             submitBtn.textContent = originalText;
+             submitBtn.disabled = false;
+        }, 2000);
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "GV Product Stack",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9f9f9"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Mood Image",
+          "info": "Overrides the product featured image in the stack view."
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "min": 20,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Card Width",
+          "default": 60
+        },
+        {
+          "type": "range",
+          "id": "rotation",
+          "min": -10,
+          "max": 10,
+          "step": 1,
+          "unit": "deg",
+          "label": "Rotation Angle",
+          "default": 0
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "GV Product Stack",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
