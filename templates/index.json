@@ -466,53 +466,6 @@
         "padding-block-end": 77
       }
     },
-    "gv_product_stack_JGcNiT": {
-      "type": "gv-product-stack",
-      "blocks": {
-        "product_Y8fR9E": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "width": 60,
-            "rotation": 0
-          }
-        },
-        "product_wAGiQt": {
-          "type": "product",
-          "settings": {
-            "product": "autumn-candy-ceramic-tabouret-n-10",
-            "width": 60,
-            "rotation": 0
-          }
-        },
-        "product_tWkWht": {
-          "type": "product",
-          "settings": {
-            "product": "il-gatopardo",
-            "width": 60,
-            "rotation": 0
-          }
-        },
-        "product_nY6E3K": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "width": 60,
-            "rotation": 0
-          }
-        }
-      },
-      "block_order": [
-        "product_Y8fR9E",
-        "product_wAGiQt",
-        "product_tWkWht",
-        "product_nY6E3K"
-      ],
-      "name": "GV Product Stack",
-      "settings": {
-        "background_color": "#f9f9f9"
-      }
-    },
     "media_with_content_W9Yt3B": {
       "type": "media-with-content",
       "blocks": {
@@ -877,6 +830,188 @@
         "padding-block-end": 100
       }
     },
+    "media_with_content_GCEq8M": {
+      "type": "media-with-content",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/gv-casa-peter-aerts-autumn-candy-collection.png",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
+          },
+          "blocks": {}
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24
+          },
+          "blocks": {
+            "text_JMprrV": {
+              "type": "text",
+              "name": "t:names.caption",
+              "settings": {
+                "text": "<p>EXTRAIT DE PARFUM</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.625rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_9PGqfJ": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_N6fc4C": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h2>Autmun Candy</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_3rdTE6": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A series of nine unique stoneware tabourets, each a layered outburst of colour and form. <br/></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_N6fc4C",
+                "text_3rdTE6"
+              ]
+            },
+            "button_crrqbJ": {
+              "type": "button",
+              "settings": {
+                "label": "DISCOVER",
+                "link": "shopify://products/air-extrait-de-parfum",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 0,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_JMprrV",
+            "group_9PGqfJ",
+            "button_crrqbJ"
+          ]
+        }
+      },
+      "name": "t:names.editorial",
+      "settings": {
+        "media_position": "left",
+        "media_width": "medium",
+        "media_height": "100svh",
+        "section_width": "page-width",
+        "extend_media": true,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 0,
+        "padding-block-end": 100
+      }
+    },
     "media_with_content_jDQjYh": {
       "type": "media-with-content",
       "blocks": {
@@ -1049,7 +1184,7 @@
       },
       "name": "t:names.editorial",
       "settings": {
-        "media_position": "left",
+        "media_position": "right",
         "media_width": "medium",
         "media_height": "100svh",
         "section_width": "full-width",
@@ -1063,9 +1198,9 @@
   "order": [
     "slideshow_X7LGWE",
     "section_MgkEX9",
-    "gv_product_stack_JGcNiT",
     "media_with_content_W9Yt3B",
     "media_with_content_Q3M9hT",
+    "media_with_content_GCEq8M",
     "media_with_content_jDQjYh"
   ]
 }
