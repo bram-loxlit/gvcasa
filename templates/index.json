@@ -617,7 +617,7 @@
             "button_4FLA9w": {
               "type": "button",
               "settings": {
-                "label": "PRE-ORDER",
+                "label": "ORDER",
                 "link": "shopify://products/air-extrait-de-parfum",
                 "open_in_new_tab": false,
                 "style_class": "button",
