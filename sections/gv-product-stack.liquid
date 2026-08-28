@@ -1,416 +1,571 @@
+{% comment %}
+  GV Product Stack - Floating Parallax Edition
+  - JS-driven parallax engine
+  - Custom split-screen modal
+  - AJAX Cart integration
+{% endcomment %}
+
+{% style %}
+  .gv-parallax-section {
+    padding: 100px 20px;
+    background-color: {{ section.settings.background_color }};
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
+  .gv-scroll-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Create space for the items to float comfortably */
+    padding: 50px 0; 
+  }
+
+  .gv-parallax-item {
+    position: relative;
+    will-change: transform; /* Performance optimization */
+    margin-bottom: 50px; /* Base spacing */
+    transition: box-shadow 0.3s ease, transform 0.1s linear; /* Smooth hover, direct parallax */
+    cursor: pointer;
+  }
+  
+  /* Horizontal Positions */
+  .gv-parallax-item--left {
+    margin-right: auto;
+    margin-left: 5%;
+  }
+  .gv-parallax-item--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gv-parallax-item--right {
+    margin-left: auto;
+    margin-right: 5%;
+  }
+
+  .gv-parallax-card {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .gv-parallax-item:hover .gv-parallax-card {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: scale(1.02);
+  }
+
+  .gv-parallax-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 3/4; /* Consistent portrait ratio or natural */
+    object-fit: cover;
+  }
+
+  .gv-parallax-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    background: #fff;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 2px;
+    pointer-events: none;
+  }
+
+  .gv-parallax-item:hover .gv-parallax-overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .gv-card-title {
+    font-family: var(--font-heading-family);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+
+  /* MODAL STYLES */
+  .gv-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: rgba(255, 255, 255, 0.01); /* Ultra subtle backdrop hook */
+    backdrop-filter: blur(0px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, backdrop-filter 0.4s ease, visibility 0.4s ease;
+  }
+
+  .gv-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  .gv-modal__inner {
+    width: 90%;
+    max-width: 1100px;
+    height: 80vh;
+    background: #fff;
+    display: flex;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.4s ease;
+    overflow: hidden;
+  }
+
+  .gv-modal.is-open .gv-modal__inner {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .gv-modal__col-image {
+    width: 55%;
+    position: relative;
+    background: #f0f0f0;
+  }
+
+  .gv-modal__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gv-modal__col-info {
+    width: 45%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow-y: auto;
+  }
+
+  .gv-modal__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10;
+    color: #000;
+    transition: transform 0.2s ease;
+  }
+  .gv-modal__close:hover {
+    transform: rotate(90deg);
+  }
+
+  .gv-modal__product-title {
+    font-family: var(--font-heading-family);
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .gv-modal__product-price {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .gv-modal__product-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 2.5rem;
+  }
+
+  .gv-modal__actions {
+    margin-top: auto;
+  }
+
+  .gv-btn-add {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 18px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .gv-btn-add:hover {
+    background: #333;
+  }
+  
+  .gv-btn-add:disabled {
+      background: #ccc;
+      color: #888;
+      cursor: not-allowed;
+  }
+
+  @media (max-width: 900px) {
+    .gv-modal__inner {
+        flex-direction: column;
+        height: 100dvh;
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+    }
+    .gv-modal__col-image {
+        width: 100%;
+        height: 45%;
+    }
+    .gv-modal__col-info {
+        width: 100%;
+        height: 55%;
+        padding: 30px;
+    }
+    .gv-parallax-item {
+        width: 90% !important; /* Force width on mobile */
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+    }
+  }
+{% endstyle %}
+
+<div class="gv-parallax-section">
+  <div class="gv-scroll-container">
+    {% for block in section.blocks %}
+      {% assign product = block.settings.product %}
+      {% if product != blank %}
+        <div class="gv-parallax-item gv-parallax-item--{{ block.settings.horizontal_position }}"
+             style="
+                width: {{ block.settings.width }}%; 
+                margin-top: {{ block.settings.vertical_offset }}px;
+             "
+             data-scroll-speed="{{ block.settings.parallax_speed }}"
+             data-product-id="{{ product.id }}"
+             data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+        >
+          <div class="gv-parallax-card">
+            {% comment %} Image Logic: Custom Mood vs Product {% endcomment %}
+            {% assign display_image = product.featured_image %}
+            {% if block.settings.custom_image != blank %}
+                {% assign display_image = block.settings.custom_image %}
+            {% endif %}
+
+            <img src="{{ display_image | image_url: width: 1000 }}" 
+                 alt="{{ display_image.alt | default: product.title }}"
+                 loading="lazy">
+            
+            <div class="gv-parallax-overlay">
+                <h3 class="gv-card-title">{{ product.title }}</h3>
+            </div>
+          </div>
+
+          {% comment %} JSON Data for Modal {% endcomment %}
+          <script type="application/json" class="gv-product-data">
+            {
+                "title": {{ product.title | json }},
+                "price": {{ product.price | money | json }},
+                "description": {{ product.description | json }},
+                "image": {{ product.featured_image | image_url: width: 1200 | json }},
+                "available": {{ product.available | json }}
+            }
+          </script>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="gv-modal" id="GVFloatingModal">
+    <div class="gv-modal__inner">
+        <button class="gv-modal__close" aria-label="Close">&times;</button>
+        
+        <div class="gv-modal__col-image">
+            <img src="" alt="" class="gv-modal__image" id="GVM_Image">
+        </div>
+        
+        <div class="gv-modal__col-info">
+            <h2 class="gv-modal__product-title" id="GVM_Title"></h2>
+            <div class="gv-modal__product-price" id="GVM_Price"></div>
+            <div class="gv-modal__product-desc" id="GVM_Desc"></div>
+            
+            <div class="gv-modal__actions">
+                <form action="/cart/add" method="post" id="GVM_Form">
+                    <input type="hidden" name="id" id="GVM_VariantId" value="">
+                    <button type="submit" class="gv-btn-add" id="GVM_Submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Parallax Engine
+    const container = document.querySelector('.gv-scroll-container');
+    const items = document.querySelectorAll('.gv-parallax-item');
+    let isRequesting = false;
+    let windowHeight = window.innerHeight;
+
+    function onScroll() {
+        if(!isRequesting) {
+            isRequesting = true;
+            requestAnimationFrame(updateParallax);
+        }
+    }
+
+    function updateParallax() {
+        const center = windowHeight / 2;
+        const parentRect = container.getBoundingClientRect(); // Optimization: Use relative to parent or viewport? 
+        // Requirements: "Hoe ver is het element van het midden van het scherm"
+        
+        items.forEach(item => {
+            const speed = parseFloat(item.dataset.scrollSpeed || 0);
+            if(speed === 0) return;
+
+            // Get static position relative to viewport
+            // Note: offsetTop is relative to parent. parent moves with scroll.
+            // element.getBoundingClientRect().top includes transform, so we must separate layout from visual.
+            // Using offsetTop + parentRect.top gives us the untransformed position relative to viewport.
+            
+            const itemTop = parentRect.top + item.offsetTop;
+            const itemCenter = itemTop + (item.offsetHeight / 2);
+            
+            const distanceFromCenter = itemCenter - center;
+            
+            // Formula: transformY
+            const translateY = distanceFromCenter * speed;
+            
+            item.style.transform = `translate3d(0, ${translateY}px, 0)`;
+        });
+
+        isRequesting = false;
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', () => {
+        windowHeight = window.innerHeight;
+        onScroll();
+    });
+    // Initial call
+    updateParallax();
+
+
+    // 2. Modal Logic
+    const modal = document.getElementById('GVFloatingModal');
+    const closeBtn = modal.querySelector('.gv-modal__close');
+    const els = {
+        img: document.getElementById('GVM_Image'),
+        title: document.getElementById('GVM_Title'),
+        price: document.getElementById('GVM_Price'),
+        desc: document.getElementById('GVM_Desc'),
+        variant: document.getElementById('GVM_VariantId'),
+        btn: document.getElementById('GVM_Submit')
+    };
+
+    function openModal(data, variantId) {
+        els.img.src = data.image;
+        els.title.textContent = data.title;
+        els.price.textContent = data.price;
+        els.desc.innerHTML = data.description;
+        els.variant.value = variantId;
+
+        if(data.available) {
+            els.btn.disabled = false;
+            els.btn.textContent = 'Add to Cart';
+        } else {
+            els.btn.disabled = true;
+            els.btn.textContent = 'Sold Out';
+        }
+
+        document.body.style.overflow = 'hidden';
+        modal.classList.add('is-open');
+    }
+
+    function closeModal() {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+
+    items.forEach(item => {
+        item.addEventListener('click', (e) => {
+            // Allow clicking links inside if any (future proof), but here we card click
+            const script = item.querySelector('.gv-product-data');
+            if(script) {
+                const data = JSON.parse(script.textContent);
+                openModal(data, item.dataset.variantId);
+            }
+        });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if(e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+
+    // 3. AJAX Add to Cart
+    const form = document.getElementById('GVM_Form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const btn = els.btn;
+        const originalText = btn.textContent;
+        
+        btn.textContent = 'Adding...';
+        btn.disabled = true;
+
+        const formData = new FormData(form);
+
+        fetch(window.Shopify.routes.root + 'cart/add.js', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            btn.textContent = 'Added';
+            setTimeout(() => {
+                closeModal();
+                btn.disabled = false;
+                btn.textContent = originalText;
+
+                // Dispatch Events for Theme Integration
+                document.dispatchEvent(new CustomEvent('cart:refresh', {
+                    bubbles: true,
+                    detail: { cart: data } 
+                }));
+                document.dispatchEvent(new CustomEvent('cart:open', {
+                    bubbles: true 
+                }));
+
+                // Legacy/Standard Shopify support
+                if(window.Shopify && window.Shopify.onCartUpdate) {
+                    window.Shopify.onCartUpdate(data);
+                }
+            }, 600);
+        })
+        .catch(err => {
+            console.error(err);
+            btn.textContent = 'Error';
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.textContent = originalText;
+            }, 2000);
+        });
+    });
+});
+</script>
+
 {% schema %}
 {
-  "name": "GV Parallax Stack",
+  "name": "GV Floating Stack",
   "settings": [
     {
-      "type": "header",
-      "content": "Sectie Instellingen"
-    },
-    {
-      "type": "range",
-      "id": "section_height",
-      "min": 100,
-      "max": 400,
-      "step": 10,
-      "unit": "vh",
-      "label": "Totale Hoogte Sectie",
-      "default": 200,
-      "info": "Hoe hoger dit getal, hoe meer ruimte de foto's hebben om te bewegen."
-    },
-    {
       "type": "color",
-      "id": "bg_color",
-      "label": "Achtergrondkleur",
-      "default": "#f4f4f4"
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
     }
   ],
   "blocks": [
     {
       "type": "product_card",
-      "name": "Product",
+      "name": "Product Card",
       "settings": [
         {
           "type": "product",
           "id": "product",
-          "label": "Kies Product"
+          "label": "Product"
         },
         {
           "type": "image_picker",
           "id": "custom_image",
-          "label": "Sfeerfoto (Optioneel)",
-          "info": "Vervangt de productfoto in de collage."
+          "label": "Custom Mood Image",
+          "info": "Overrides product image for the stack view"
         },
         {
-          "type": "header",
-          "content": "Parallax Instellingen"
+            "type": "header",
+            "content": "Layout & Animation"
         },
         {
-          "type": "range",
-          "id": "parallax_speed",
-          "min": -0.5,
-          "max": 0.5,
-          "step": 0.1,
-          "label": "Parallax Snelheid",
-          "default": -0.1,
-          "info": "Negatief = langzamer (diepte). Positief = sneller dan scroll."
+            "type": "range",
+            "id": "parallax_speed",
+            "min": -0.5,
+            "max": 0.5,
+            "step": 0.1,
+            "label": "Parallax Speed",
+            "default": 0.1,
+            "info": "Negative moves opposite to scroll"
         },
         {
           "type": "range",
           "id": "width",
-          "min": 10,
+          "min": 20,
           "max": 100,
           "step": 5,
           "unit": "%",
-          "label": "Breedte Afbeelding",
-          "default": 40
+          "label": "Card Width",
+          "default": 50
         },
         {
-          "type": "range",
-          "id": "vertical_offset",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "label": "Verticale Startpositie (Top)",
-          "default": 10
+            "type": "select",
+            "id": "horizontal_position",
+            "label": "Horizontal Position",
+            "options": [
+                { "value": "left", "label": "Left" },
+                { "value": "center", "label": "Center" },
+                { "value": "right", "label": "Right" }
+            ],
+            "default": "center"
         },
         {
-          "type": "select",
-          "id": "horizontal_align",
-          "label": "Horizontale Positie",
-          "options": [
-            {"value": "flex-start", "label": "Links"},
-            {"value": "center", "label": "Midden"},
-            {"value": "flex-end", "label": "Rechts"}
-          ],
-          "default": "center"
+            "type": "range",
+            "id": "vertical_offset",
+            "min": -100,
+            "max": 200,
+            "step": 10,
+            "unit": "px",
+            "label": "Vertical Margin Top",
+            "default": 0,
+            "info": "Adjust initial spacing"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "GV Parallax Stack",
+      "name": "GV Floating Stack",
       "blocks": [
-        {"type": "product_card", "settings": {"parallax_speed": -0.2, "vertical_offset": 10, "horizontal_align": "flex-start"}},
-        {"type": "product_card", "settings": {"parallax_speed": 0.1, "vertical_offset": 40, "horizontal_align": "flex-end"}},
-        {"type": "product_card", "settings": {"parallax_speed": -0.1, "vertical_offset": 70, "horizontal_align": "center"}}
+        { 
+            "type": "product_card",
+            "settings": { "width": 40, "horizontal_position": "left", "parallax_speed": 0.1 } 
+        },
+        { 
+            "type": "product_card", 
+            "settings": { "width": 40, "horizontal_position": "right", "parallax_speed": -0.1, "vertical_offset": 50 } 
+        }
       ]
     }
   ]
 }
 {% endschema %}
-
-<div class="gv-scroll-container" style="background-color: {{ section.settings.bg_color }}; height: {{ section.settings.section_height }}vh;">
-  
-  <div class="gv-parallax-wrapper">
-    {% for block in section.blocks %}
-      {% assign product = block.settings.product %}
-      {% if product != blank %}
-        
-        {% comment %} Kies de juiste afbeelding {% endcomment %}
-        {% assign image_to_show = product.featured_image %}
-        {% if block.settings.custom_image != blank %}
-          {% assign image_to_show = block.settings.custom_image %}
-        {% endif %}
-
-        <div class="gv-parallax-item" 
-             style="
-                width: {{ block.settings.width }}%; 
-                top: {{ block.settings.vertical_offset }}%;
-                justify-content: {{ block.settings.horizontal_align }};
-             "
-             data-scroll-speed="{{ block.settings.parallax_speed }}"
-             data-block-id="{{ block.id }}">
-          
-          <div class="gv-image-card" onclick="openGVModal('{{ block.id }}')">
-            <img src="{{ image_to_show | image_url: width: 1200 }}" 
-                 alt="{{ image_to_show.alt }}" 
-                 loading="lazy"
-                 width="{{ image_to_show.width }}"
-                 height="{{ image_to_show.height }}">
-            
-            <div class="gv-hover-overlay">
-              <span>Shop {{ product.title }}</span>
-            </div>
-          </div>
-
-          <script type="application/json" id="data-{{ block.id }}">
-            {
-              "id": {{ product.selected_or_first_available_variant.id }},
-              "title": {{ product.title | json }},
-              "price": {{ product.price | money | json }},
-              "description": {{ product.description | strip_html | truncatewords: 30 | json }},
-              "image": {{ product.featured_image | image_url: width: 800 | json }},
-              "url": {{ product.url | json }},
-              "available": {{ product.available | json }}
-            }
-          </script>
-
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-
-</div>
-
-<div id="GV-QuickShop-Modal" class="gv-modal-overlay" onclick="closeGVModal()">
-  <div class="gv-modal-content" onclick="event.stopPropagation()">
-    <button class="gv-close-btn" onclick="closeGVModal()">&times;</button>
-    
-    <div class="gv-modal-grid">
-      <div class="gv-modal-image">
-        <img id="gv-modal-img" src="" alt="">
-      </div>
-      <div class="gv-modal-info">
-        <h3 id="gv-modal-title"></h3>
-        <p id="gv-modal-price"></p>
-        <p id="gv-modal-desc"></p>
-        
-        <button id="gv-atc-btn" class="gv-atc-button" onclick="addToCartGV()">Add to Bag</button>
-        <a id="gv-full-link" href="#" class="gv-view-full">View Full Details</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  /* --- LAYOUT & PARALLAX --- */
-  .gv-scroll-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .gv-parallax-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-  }
-
-  .gv-parallax-item {
-    position: absolute;
-    display: flex;
-    will-change: transform; /* Performance optimalisatie */
-    padding: 20px;
-    z-index: 1;
-  }
-
-  .gv-image-card {
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  }
-
-  .gv-image-card:hover {
-    transform: scale(1.02);
-    z-index: 10;
-  }
-
-  .gv-image-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .gv-hover-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.2);
-    opacity: 0;
-    transition: opacity 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .gv-image-card:hover .gv-hover-overlay {
-    opacity: 1;
-  }
-
-  /* --- MODAL --- */
-  .gv-modal-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(5px);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s;
-  }
-
-  .gv-modal-overlay.is-open {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .gv-modal-content {
-    background: #fff;
-    width: 90%; max-width: 900px;
-    height: 70vh;
-    display: flex;
-    position: relative;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-  }
-
-  .gv-close-btn {
-    position: absolute; top: 10px; right: 20px;
-    background: none; border: none; font-size: 30px; cursor: pointer; z-index: 10;
-  }
-
-  .gv-modal-grid { display: flex; width: 100%; height: 100%; }
-  
-  .gv-modal-image { width: 50%; background: #f4f4f4; display: flex; align-items: center; justify-content: center; }
-  .gv-modal-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
-
-  .gv-modal-info { width: 50%; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
-  
-  #gv-modal-title { font-size: 1.8rem; margin-bottom: 10px; font-family: var(--font-heading-family); }
-  #gv-modal-price { font-size: 1.2rem; color: #666; margin-bottom: 20px; }
-  #gv-atc-button { margin-top: 20px; }
-
-  .gv-atc-button {
-    width: 100%; background: #000; color: #fff; padding: 15px;
-    border: none; text-transform: uppercase; cursor: pointer;
-    font-weight: bold; transition: background 0.3s;
-  }
-  .gv-atc-button:hover { background: #333; }
-  .gv-atc-button:disabled { background: #ccc; cursor: not-allowed; }
-
-  @media (max-width: 768px) {
-    .gv-modal-content { flex-direction: column; height: 90vh; }
-    .gv-modal-grid { flex-direction: column; }
-    .gv-modal-image, .gv-modal-info { width: 100%; height: 50%; }
-    .gv-modal-info { padding: 20px; }
-  }
-</style>
-
-<script>
-  let currentVariantId = null;
-
-  // 1. DE PARALLAX ENGINE (Objects With Narratives Logic)
-  document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.gv-parallax-item');
-    const container = document.querySelector('.gv-scroll-container');
-    
-    function animate() {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      
-      items.forEach(item => {
-        const speed = parseFloat(item.dataset.scrollSpeed) || 0;
-        const rect = item.getBoundingClientRect();
-        
-        // Is het item in de buurt van de viewport?
-        if (rect.top < windowHeight * 1.5 && rect.bottom > -windowHeight * 0.5) {
-          // De Formule: Bereken verplaatsing t.o.v. scroll
-          // We gebruiken de container offset als referentiepunt
-          const containerTop = container.getBoundingClientRect().top + scrollY;
-          const itemTop = item.offsetTop + containerTop;
-          
-          const yPos = (scrollY - itemTop + (windowHeight / 2)) * speed;
-          
-          item.style.transform = `translateY(${yPos}px)`;
-        }
-      });
-      
-      requestAnimationFrame(animate);
-    }
-    
-    requestAnimationFrame(animate);
-  });
-
-  // 2. MODAL LOGIC
-  const modal = document.getElementById('GV-QuickShop-Modal');
-  const atcBtn = document.getElementById('gv-atc-btn');
-
-  function openGVModal(blockId) {
-    const dataScript = document.getElementById(`data-${blockId}`);
-    if(!dataScript) return;
-    
-    const data = JSON.parse(dataScript.textContent);
-    
-    // Vul data
-    document.getElementById('gv-modal-img').src = data.image;
-    document.getElementById('gv-modal-title').innerText = data.title;
-    document.getElementById('gv-modal-price').innerText = data.price;
-    document.getElementById('gv-modal-desc').innerText = data.description;
-    document.getElementById('gv-full-link').href = data.url;
-    
-    currentVariantId = data.id;
-    
-    // Check voorraad
-    if(data.available) {
-      atcBtn.innerText = "Add to Bag";
-      atcBtn.disabled = false;
-    } else {
-      atcBtn.innerText = "Sold Out";
-      atcBtn.disabled = true;
-    }
-
-    modal.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeGVModal() {
-    modal.classList.remove('is-open');
-    document.body.style.overflow = '';
-  }
-
-  // 3. ADD TO CART & DRAWER TRIGGER (JW Anderson Style)
-  function addToCartGV() {
-    if(!currentVariantId) return;
-
-    atcBtn.innerText = "Adding...";
-    
-    const formData = {
-      'items': [{
-        'id': currentVariantId,
-        'quantity': 1
-      }]
-    };
-
-    fetch(window.Shopify.routes.root + 'cart/add.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Succes!
-      atcBtn.innerText = "Added";
-      
-      // Wacht heel even en sluit dan de modal
-      setTimeout(() => {
-        closeGVModal();
-        
-        // TRIGGER DE CART DRAWER
-        // We vuren alle bekende events af voor maximale compatibiliteit
-        document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true, cancelable: true }));
-        document.documentElement.dispatchEvent(new CustomEvent('cart:open', { bubbles: true, cancelable: true }));
-        document.documentElement.dispatchEvent(new CustomEvent('ajaxProduct:added', { bubbles: true, cancelable: true }));
-        
-        // Voor specifieke thema's (zoals Prestige / Dawn)
-        const cartDrawer = document.querySelector('cart-drawer');
-        if(cartDrawer) cartDrawer.open();
-
-      }, 500);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      atcBtn.innerText = "Error";
-    });
-  }
-</script>
