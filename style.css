@@ -4,10 +4,6 @@
     --bg-color: #ffffff;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 body, html {
     margin: 0;
     padding: 0;
@@ -18,18 +14,19 @@ body, html {
     color: var(--text-color);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: hidden; /* Voorkomt ongewenst scrollen */
 }
 
-/* Witruimte boven het logo (neemt alle beschikbare ruimte in en centreert de tekst) */
+/* Bovenste 2/3 van het scherm (67vh): inhoud perfect gecentreerd */
 .main-content {
-    flex: 1;
+    height: 67vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 .main-text {
@@ -66,13 +63,10 @@ body, html {
     font-size: 1.2em;
 }
 
-/* Footer structuur */
+/* Onderste 1/3 van het scherm: Footer & Groene balk */
 .footer {
     position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     margin-top: auto;
 }
 
@@ -86,7 +80,7 @@ body, html {
     z-index: 10;
 }
 
-/* SVG Logo sluit naadloos aan op de balk */
+/* Logo aansluiting */
 .wordmark-container {
     width: 100%;
     display: block;
@@ -98,25 +92,22 @@ body, html {
     width: 100%;
     height: auto;
     fill: var(--brand-green);
-    margin-bottom: -1px; /* Sluit exact aan op de balk */
+    transform: translateY(2px); /* Duwt logo exact op de groene lijn */
 }
 
-/* De vaste groene balk onderaan */
+/* Vaste hoogte van 33% van het scherm voor de groene onderbalk */
 .green-footer-bar {
     width: 100%;
-    height: 60px; /* Vaste hoogte van de balk (pas aan naar wens, bijv. 80px of 10vh) */
+    height: 33vh;
     background-color: var(--brand-green);
 }
 
-/* Responsive instellingen */
+/* Responsive fijnafstemming voor mobiel */
 @media (max-width: 768px) {
     .main-text {
         font-size: 0.95rem;
     }
     .copyright {
         left: 1rem;
-    }
-    .green-footer-bar {
-        height: 40px; /* Iets minder hoog op mobiel */
     }
 }
