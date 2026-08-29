@@ -17,9 +17,9 @@ body, html {
     overflow: hidden; /* Voorkomt ongewenst scrollen */
 }
 
-/* Bovenste 2/3 van het scherm (67vh): inhoud perfect gecentreerd */
+/* Bovenste gedeelte van het scherm (past zich flexibel aan de footer aan) */
 .main-content {
-    height: 67vh;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +63,7 @@ body, html {
     font-size: 1.2em;
 }
 
-/* Onderste 1/3 van het scherm: Footer & Groene balk */
+/* Footer & Groene balk */
 .footer {
     position: relative;
     width: 100%;
@@ -95,19 +95,22 @@ body, html {
     transform: translateY(2px); /* Duwt logo exact op de groene lijn */
 }
 
-/* Vaste hoogte van 33% van het scherm voor de groene onderbalk */
+/* Desktop & Tablet: Groene onderbalk 1/3 kleiner (22vh) */
 .green-footer-bar {
     width: 100%;
-    height: 33vh;
+    height: 22vh;
     background-color: var(--brand-green);
 }
 
-/* Responsive fijnafstemming voor mobiel */
+/* Mobile: behoudt de oorspronkelijke verhouding van 33vh */
 @media (max-width: 768px) {
     .main-text {
         font-size: 0.95rem;
     }
     .copyright {
         left: 1rem;
+    }
+    .green-footer-bar {
+        height: 33vh;
     }
 }
